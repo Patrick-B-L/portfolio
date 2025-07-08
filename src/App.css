@@ -39,6 +39,7 @@
 
 :root {
   --lightBlue-color: aliceblue;
+  --mediumBlue-color: #e6f1ff;
   --white-color: #FFF;
   --link-color: darkblue; 
   --black-color: #000;
@@ -62,7 +63,7 @@ body {
 }
 h1 {
   font-size: 2rem;
-  font-family: ;
+  font-family: 'Courier New', Courier, monospace;
   color: var(--black-color);
   margin: 20px 0;
 }
