@@ -1,0 +1,13 @@
+#AboutMe {
+  background-color: var(--mediumBlue-color);
+  width: 100%;
+  padding: 2rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+#AboutMe p {
+  max-width: 35rem;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import '../styles/NavBar.css';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] =useState(false);
@@ -7,7 +8,10 @@ export default function NavBar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <section className='NavBar-section'>Navbar
+    <section className='NavBar-section'>
+      <div className='NavBar-section-logo'>
+        <img src="./images/Portfolio-logo.png" alt="Portfoliologo2.png" />
+      </div>
         <nav>
           {/* Hamburger menu*/}
           <button className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
@@ -22,6 +26,7 @@ export default function NavBar() {
               smooth={true} 
               duration={500} 
               onClick={toggleMenu}
+              offset={-100}
               >
                 <span>
                   Home
@@ -34,6 +39,7 @@ export default function NavBar() {
               smooth={true} 
               duration={500} 
               onClick={toggleMenu}
+              offset={-100}
               >
                 <span>
                   About Me
@@ -46,13 +52,14 @@ export default function NavBar() {
               smooth={true} 
               duration={500} 
               onClick={toggleMenu}
+              offset={-100}
               >
                 <span>
                 Projects
                 </span>
               </Link>
             </li>
-            <li className='NavBar-section-link'>
+            {/* <li className='NavBar-section-link'>
               <Link 
               to="ContactMe"
               smooth={true} 
@@ -63,7 +70,7 @@ export default function NavBar() {
                   Contact Me
                 </span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
     </section>

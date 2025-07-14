@@ -51,8 +51,9 @@
   align-items: center;
   padding: 2rem 2rem 0rem;
   /* background-color: rgba(229, 239, 255, 0.807); */
-  background-color: var(--mediumBlue-color);
   height: 20rem;
   width: 100%;
   box-sizing: border-box;
+}
+.hero-section-text p {
 }

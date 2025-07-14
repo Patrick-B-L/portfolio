@@ -1,0 +1,7 @@
+#ContactMe {
+  background-color: var(--mediumBlue-color);
+  width: 100%;
+  padding: 2rem;
+  height: 20rem;
+  box-sizing: border-box;
+}

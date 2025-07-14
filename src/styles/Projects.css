@@ -1,6 +1,5 @@
 #Projects {
   width: 100%;
-  background-color: var(--mediumBlue-color);
 }
 .project-tiles-container ul {
   display: flex;
@@ -28,7 +27,7 @@
 .project-tiles-container ul li img {
   width: 100%;
   height: 15rem;
-  border-bottom: #ccc;
+  border-bottom: 1px solid rgba(18, 52, 86, 0.3);
   object-fit: cover;
 }
 .project-tiles-container ul li p {
