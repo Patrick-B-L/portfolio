@@ -1,6 +1,6 @@
 {
-  "homepage": "https://patrick-b-l.github.io/my-portfolio/",
-  "name": "my-portfolio",
+  "homepage": "https://patrick-b-l.github.io/portfolio/",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
