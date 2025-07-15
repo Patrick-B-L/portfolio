@@ -38,7 +38,7 @@
 }
 .about-me-text.open {
   display: flex;
-  height: 10rem;
+  min-height: 10rem;
 }
 .about-me-text-content {
   display: flex;

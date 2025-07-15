@@ -90,6 +90,6 @@
 }
 .hero-section-text-description.open {
   display: flex;
-  height: 10rem;
+  min-height: 10rem;
   width: 70%;
 }
