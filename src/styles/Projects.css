@@ -13,7 +13,7 @@
 .project-tiles-container ul li{
   list-style: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -26,10 +26,6 @@
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.project-tiles-container ul li:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
 .project-tiles-container ul li img {
   width: 100%;
   height: 14.5rem;
@@ -41,3 +37,18 @@
   margin: 0.8rem;
   height: 6rem;
 }
+.project-tile-links {
+  margin: 1rem;
+}
+.project-tile-links a {
+  display: inline-block;
+  color: var(--link-color);
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-tile-links a:hover {
+  transform: scale(1.25);
+}
+  

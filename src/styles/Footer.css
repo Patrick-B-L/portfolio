@@ -9,9 +9,14 @@
   border-radius: 0 0 5px 5px;
 }
 .footer-link {
+  display: inline-block;
   color: var(--white-color);
   text-decoration: none;
   font-size: 1.2rem;
   margin: 0 1rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.footer-link:hover {
+  transform: scale(1.25);
 }

@@ -15,12 +15,14 @@ export default function ProjectTiles() {
               <img src={project.image} alt={project.title} />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+              <div className='project-tile-links'>
               {project.website && (
-                <a href={project.website} target='_blank' rel='noopener noreferrer'>View Website</a>
+                <a href={project.website} target='_blank' rel='noopener noreferrer' title='View Website'><i className="fas fa-globe"></i></a>
               )}
               {project.ghLink && (
-                <a href={project.ghLink} target='_blank' rel='noopener noreferrer'>View Project In Github</a>
+                <a href={project.ghLink} target='_blank' rel='noopener noreferrer' title='View Project In Github'><i className="fab fa-github"></i></a>
               )}
+              </div>
             </li>
         ))}
         </ul>
