@@ -10,7 +10,16 @@ export default function NavBar() {
   return (
     <section className='NavBar-section'>
       <div className='NavBar-section-logo'>
-        <img src="./images/Portfolio-logo.png" alt="Portfoliologo2.png" />
+        <Link  
+              to="HeroSection"
+              smooth={true} 
+              duration={500} 
+              offset={-100}
+              >
+                <span>
+                  <img src="./images/Portfolio-logo.png" alt="Portfoliologo2.png" />
+                </span>
+              </Link>
       </div>
         <nav>
           {/* Hamburger menu*/}
