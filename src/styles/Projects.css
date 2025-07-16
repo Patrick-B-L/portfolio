@@ -21,7 +21,7 @@
   height: 30rem;;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 1rem;
+  margin: 2rem;
   background-color: var(--lightBlue-color);
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -50,5 +50,33 @@
 
 .project-tile-links a:hover {
   transform: scale(1.25);
+}
+@media (max-width: 900px) {
+  .project-tiles-container ul li {
+    width: 85%;
+    max-width: 30rem;
+    height: auto;
+  }
+  .project-tiles-container ul li img {
+    height: auto;
+  }
+  .project-tiles-container ul li p {
+    font-size: 0.9rem;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .project-tiles-container ul li {
+    width: 85%;
+    height: auto;
+    margin: 2rem 0rem;
+  }
+  .project-tiles-container ul li img {
+    height: auto;
+  }
+  .project-tiles-container ul li p {
+    font-size: 0.9rem;
+    height: auto;
+  }
 }
   

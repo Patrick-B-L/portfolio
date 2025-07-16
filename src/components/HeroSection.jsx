@@ -6,7 +6,7 @@ export default function HeroSection() {
   const toggleHeroSection = () => setHeroSectionOpen(!heroSectionOpen);
 
   return (
-    <section className='hero-section' id='HeroSection'>
+    <section className='hero-section' id='HeroSection' title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"} onClick={toggleHeroSection}>
       <div className='hero-section-title'>
         <h1>Portfolio</h1>
       </div>
@@ -18,13 +18,11 @@ export default function HeroSection() {
         onClick={toggleHeroSection}
       >
         <div className={`hero-section-text-content ${heroSectionOpen ? "open" : ""}`}>
-          <div className={`hero-section-text-content-arrows-left ${heroSectionOpen ? "open" : ""}`}>
+          {/* <div className={`hero-section-text-content-arrows-left ${heroSectionOpen ? "open" : ""}`}>
             <span>&gt;</span>
-            <span>&gt;</span>
-          </div>
+          </div> */}
           <h2>Welcome to My Portfolio</h2>
           <div className={`hero-section-text-content-arrows-right ${heroSectionOpen ? "open" : ""}`}>
-            <span>&gt;</span>
             <span>&gt;</span>
           </div>
         </div>
