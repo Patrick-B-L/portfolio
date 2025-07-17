@@ -13,8 +13,10 @@ export default function NavBar() {
         <Link  
               to="HeroSection"
               smooth={true} 
-              duration={500} 
+              duration={500}
+              onClick={menuOpen ? toggleMenu : null} 
               offset={-100}
+              title='Go to Home'
               >
                 <span>
                   <img src="./images/Portfolio-logo.png" alt="Portfoliologo2.png" />

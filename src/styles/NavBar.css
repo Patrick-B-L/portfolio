@@ -15,6 +15,9 @@
   transition: height 0.3s ease-in-out;
   z-index: 1000;
 }
+.NavBar-section-logo {
+  cursor: pointer;
+}
 .NavBar-section-logo img {
   height: 4rem;
   margin-left: auto;
@@ -30,7 +33,6 @@
 }
 
 .NavBar-section-link{
-
   color: var(--link-color);
   margin: 0 20px;
   cursor: pointer;
@@ -48,7 +50,8 @@
   }
 
   .NavBar-section nav ul {
-    display: none;
+    /* Not needed when nav-links are displayed with animation */
+    /* display: none; */
   }
 
   .NavBar-section button {
@@ -93,20 +96,12 @@
     /* Looks better on actual phone */
     transform: rotate(-45deg) translate(7px, -8px);
   }
-
-  /* .nav-links.show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 25px;
-    right: 10px;
-    background: var(--white-color);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  } */
-   
-  .nav-links.show {
+  /* Nav-links displayed with animation */
+  .nav-links {
+    opacity: 0;
+    transform: translateY(-50px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -117,5 +112,24 @@
     background: var(--white-color);
     padding: 1rem 0rem;
     gap: 1rem;
+    z-index: 999;
   }
+  .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  /* Nav-links displayed without animation */
+  /* .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    left: 0;
+    background: var(--white-color);
+    padding: 1rem 0rem;
+    gap: 1rem;
+  } */
 }

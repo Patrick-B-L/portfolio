@@ -40,10 +40,10 @@
 :root {
   --lightBlue-color: aliceblue;
   --mediumBlue-color: #e6f1ff;
+  --darkBlue-color: #00005e;
   --white-color: #FFF;
   --link-color: darkblue; 
   --black-color: #000;
-  --darkBlue-color: #00005e;
 }
 
 body {
