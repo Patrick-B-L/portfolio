@@ -42,6 +42,10 @@ export default function Footer() {
               Contact Me
             </Link> */}
         </nav>
+        <div>Copyright &copy; 2025</div>
+        <div className='footer-socials'>
+          <a href='https://github.com/Patrick-B-L' target='_blank' rel='noopener noreferrer' title='View My Projects In Github'><i className="fab fa-github"></i></a>
+        </div>
     </div>
   )
 }
