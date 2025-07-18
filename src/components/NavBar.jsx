@@ -10,12 +10,17 @@ export default function NavBar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
+    const threshold = 5;
+
     const handleScroll = () => {
       if (window.scrollY < 50) {
         setShowNav(true);
-      } else if (!menuOpen && window.scrollY > lastScrollY) {
+      } else if (
+        !menuOpen && 
+        window.scrollY > lastScrollY + threshold) {
         setShowNav(false); // Scroll down
-      } else {
+      } else if (
+        window.scrollY < lastScrollY - threshold) {
         setShowNav(true); // Scroll up
       }
       setLastScrollY(window.scrollY);
@@ -23,7 +28,7 @@ export default function NavBar() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, menuOpen]);
 
   return (
     <section className={`NavBar-section${showNav ? '' : ' nav-hidden'}`}>
