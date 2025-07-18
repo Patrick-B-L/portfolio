@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 .hero-section-title {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: var(--darkBlue-color);
@@ -16,6 +16,11 @@
   width: 100%;
   border-radius: 5px 0 0 0;
 }
+  .hero-section-text {
+    padding-top: 2rem;
+    background-color: var(--darkBlue-color);
+    color: var(--white-color);
+  }
 .hero-section-title h1 {
   color: var(--white-color);
   font-size: 3rem;
@@ -97,17 +102,10 @@
   width: 70%;
 }
 @media (max-width: 600px) {
-  .hero-section {
+   .hero-section {
     border-radius: 0;
-  }
-  .hero-section-title {
-    display: none;
   }
   .hero-section-text {
     padding-top: 2rem;
-    background-color: var(--darkBlue-color);
-    color: var(--white-color);
   }
-
-
 }

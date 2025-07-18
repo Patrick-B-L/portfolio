@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import '../styles/NavBar.css';
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] =useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(window.scrollY);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 50) {
+        setShowNav(true);
+      } else if (!menuOpen && window.scrollY > lastScrollY) {
+        setShowNav(false); // Scroll down
+      } else {
+        setShowNav(true); // Scroll up
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <section className='NavBar-section'>
+    <section className={`NavBar-section${showNav ? '' : ' nav-hidden'}`}>
       <div className='NavBar-section-logo'>
         <Link  
               to="HeroSection"
