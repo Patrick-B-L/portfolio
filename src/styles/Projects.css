@@ -13,12 +13,12 @@
 .project-tiles-container ul li{
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 20rem;
-  height: 31rem;;
+  height: 32rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 2rem;
@@ -39,7 +39,7 @@
 .project-tiles-container ul li p {
   font-size: 0.8rem;
   margin: 0rem 1rem 2rem 1rem;
-  height: 6rem;
+  height: 7rem;
 }
 .project-tile-links {
   margin: 1.5rem 0rem;
