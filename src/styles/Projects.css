@@ -17,8 +17,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 20rem;
-  height: 32rem;
+  width: 24rem;
+  height: 35rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 2rem;
@@ -28,7 +28,7 @@
 }
 .project-tiles-container ul li img {
   width: 100%;
-  height: 14.5rem;
+  height: 17.5rem;
   border-bottom: 1px solid rgba(18, 52, 86, 0.3);
   object-fit: cover;
 }
@@ -55,7 +55,7 @@
 .project-tile-links a:hover {
   transform: scale(1.25);
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .project-tiles-container ul li {
     width: 85%;
     max-width: 30rem;
