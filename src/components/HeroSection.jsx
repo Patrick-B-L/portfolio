@@ -6,32 +6,20 @@ export default function HeroSection() {
   const toggleHeroSection = () => setHeroSectionOpen(!heroSectionOpen);
 
   return (
-    <section className='hero-section' id='HeroSection' title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"} onClick={toggleHeroSection}>
-      <div className='hero-section-title'>
-        <h1>Portfolio</h1>
-      </div>
-      {/* <div className='hero-section-image'>
-        <img src="" alt="profile.jpg" />
-      </div> */}
-      <div 
-        className='hero-section-text'
-        onClick={toggleHeroSection}
-      >
+    <section className='hero-section' id='HeroSection' onClick={toggleHeroSection} title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"}>
+      <div>
         <div className={`hero-section-text-content ${heroSectionOpen ? "open" : ""}`}>
-          {/* <div className={`hero-section-text-content-arrows-left ${heroSectionOpen ? "open" : ""}`}>
-            <span>&gt;</span>
-          </div> */}
           <h2>Welcome to My Portfolio</h2>
           <div className={`hero-section-text-content-arrows-right ${heroSectionOpen ? "open" : ""}`}>
             <span>&gt;</span>
           </div>
         </div>
-        <div className={`hero-section-text-description ${heroSectionOpen ? "open" : ""}`}>
-          <p>
+      </div>
+      <div className={`hero-section-text-description ${heroSectionOpen ? "open" : ""}`}>
+        <p>
           Hello! My name is Patrick and I am a developer with a passion for creating dynamic applications. 
           Feel free to explore my portfolio to see some of the projects I've worked on.
         </p>
-        </div>
       </div>
     </section>
   )

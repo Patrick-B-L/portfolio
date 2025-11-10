@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0 2rem;
   /* max-height: 40rem;
   overflow-y: auto; */
 }
@@ -17,8 +17,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 24rem;
-  height: 35rem;
+  max-width: 24rem;
+  max-height: 43rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 2rem;
@@ -27,19 +27,32 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .project-tiles-container ul li img {
-  width: 100%;
+  width: 24rem;
   height: 17.5rem;
   border-bottom: 1px solid rgba(18, 52, 86, 0.3);
-  object-fit: cover;
+  object-fit: cover;  
+}
+.title_description_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 15rem;
 }
 .project-tiles-container ul li h3 {
   margin: 1rem 0;
   color: var(--black-color);
+  border-bottom: 1px solid rgba(18, 52, 86, 0.3);
 }
 .project-tiles-container ul li p {
   font-size: 0.8rem;
-  margin: 0rem 1rem 2rem 1rem;
-  height: 7rem;
+  font-style: italic;
+  margin: 0rem;
+  padding: 1rem;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 25px;
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 6px 0px, rgba(0, 0, 0, 0.05) 0px 0px 10px 5px; */
 }
 .project-tile-links {
   margin: 1.5rem 0rem;
@@ -49,7 +62,13 @@
   color: var(--link-color);
   font-size: 1.5rem;
   margin: 0 1.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  height: 2rem;
+  width: 2rem;
   transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px 0px, rgba(0, 0, 0, 0.2) 0px 0px 6px 3px;
 }
 
 .project-tile-links a:hover {
@@ -60,9 +79,11 @@
     width: 85%;
     max-width: 30rem;
     height: auto;
+    max-height: none;
   }
   .project-tiles-container ul li img {
     height: auto;
+    width: 100%;
   }
   .project-tiles-container ul li p {
     font-size: 0.9rem;
@@ -70,13 +91,17 @@
   }
 }
 @media (max-width: 600px) {
+  .project-tiles-container ul {
+    padding: 0 1rem;
+  }
   .project-tiles-container ul li {
-    width: 85%;
+    width: 100%;
     height: auto;
     margin: 2rem 0rem;
   }
   .project-tiles-container ul li img {
     height: auto;
+    width: 100%;
   }
   .project-tiles-container ul li p {
     font-size: 0.9rem;

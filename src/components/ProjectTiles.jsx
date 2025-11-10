@@ -11,21 +11,22 @@ export default function ProjectTiles() {
         <ul>
         {projectData.map((project, index) => (
             <li  className='project-tile'>
-              
               <img src={project.image} alt={project.title} />
-              <h3>{project.title}</h3>
-              <p>
-                <>
-                  {project.description}
-                  {project.description2 && (
-                    <>
-                      <br />
-                      <br />
-                      {project.description2}
-                    </>
-                  )}
-                </>
-              </p>
+              <div className='title_description_container'>
+                <h3>{project.title}</h3>
+                <p>
+                  <>
+                    {project.description}
+                    {project.description2 && (
+                      <>
+                        <br />
+                        <br />
+                        {project.description2}
+                      </>
+                    )}
+                  </>
+                </p>
+              </div>
               <div className='project-tile-links'>
               {project.website && (
                 <a href={project.website} target='_blank' rel='noopener noreferrer' title='View Website'><i className="fas fa-globe"></i></a>

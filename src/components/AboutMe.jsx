@@ -26,6 +26,7 @@ export default function AboutMe() {
           </p>
         </div>
       </div>
+      {/* <div className='separator-line'></div> */}
     </div>
   )
 }
