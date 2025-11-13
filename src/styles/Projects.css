@@ -21,10 +21,14 @@
   max-height: 43rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 2rem;
+  margin: 3rem;
   background-color: var(--mediumBlue-color);
   overflow: hidden;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.project-tiles-container ul li:hover {
+  transform: scale(1.05);
 }
 .project-tiles-container ul li img {
   width: 24rem;
@@ -99,6 +103,9 @@
     height: auto;
     margin: 2rem 0rem;
   }
+  .project-tiles-container ul li:hover {
+  transform: none;
+}
   .project-tiles-container ul li img {
     height: auto;
     width: 100%;
