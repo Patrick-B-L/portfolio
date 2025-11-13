@@ -6,10 +6,20 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 2rem;
-  /* max-height: 40rem;
-  overflow-y: auto; */
+  padding: 2rem;
+  margin: 0;
+  /* border-radius: 8px; */
 }
+
+/* Alternating row backgrounds */
+.project-tiles-container ul.row-even {
+  background-color: rgba(229, 239, 255, 0.5);
+}
+
+.project-tiles-container ul.row-odd {
+  background-color: rgba(200, 220, 240, 0.5);
+}
+
 .project-tiles-container ul li{
   list-style: none;
   display: flex;
@@ -27,8 +37,9 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
+
 .project-tiles-container ul li:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 .project-tiles-container ul li img {
   width: 24rem;
@@ -78,23 +89,23 @@
 .project-tile-links a:hover {
   transform: scale(1.25);
 }
-@media (max-width: 1000px) {
+@media (max-width: 1684px) and (min-width: 1147px) {
   .project-tiles-container ul li {
-    width: 85%;
+    /* width: 85%;
     max-width: 30rem;
     height: auto;
-    max-height: none;
+    max-height: none; */
   }
   .project-tiles-container ul li img {
-    height: auto;
-    width: 100%;
+    /* height: auto;
+    width: 100%; */
   }
   .project-tiles-container ul li p {
-    font-size: 0.9rem;
-    height: auto;
+    /* font-size: 0.9rem;
+    height: auto; */
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 1146px) {
   .project-tiles-container ul {
     padding: 0 1rem;
   }
