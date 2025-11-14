@@ -1,5 +1,6 @@
 #Projects {
   width: 100%;
+  margin: 2rem 0 0;
 }
 .project-tiles-container ul {
   display: flex;
@@ -17,7 +18,8 @@
 }
 
 .project-tiles-container ul.row-odd {
-  background-color: rgba(200, 220, 240, 0.5);
+  background-color: rgba(200, 220, 240, 0);
+  /* background-color: rgba(200, 220, 240, 0.5); */
 }
 
 .project-tiles-container ul li{

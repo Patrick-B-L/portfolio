@@ -13,10 +13,10 @@ export default function AboutMe() {
             <span >&gt;</span>
           </div> */}
           <h2>About Me</h2>
+          </div>
           <div className={`about-me-title-arrows-right ${aboutMeOpen ? "open" : ""}`}>
             <span>▶</span>
           </div>
-        </div>
       </div>
       <div className={`about-me-text ${aboutMeOpen ? "open" : ""}`}>
         <div className='about-me-text-content'>
