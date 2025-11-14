@@ -26,7 +26,7 @@
   rotate: 270deg;
 }
 .about-me-title-arrows-right {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.25);
   rotate: 90deg;
   transition: rotate 0.3s ease-in-out;
   margin-bottom: 1rem;

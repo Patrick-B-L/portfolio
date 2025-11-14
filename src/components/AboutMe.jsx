@@ -14,8 +14,7 @@ export default function AboutMe() {
           </div> */}
           <h2>About Me</h2>
           <div className={`about-me-title-arrows-right ${aboutMeOpen ? "open" : ""}`}>
-            {/* <span >&gt;</span> */}
-            <span >&gt;</span>
+            <span>▶</span>
           </div>
         </div>
       </div>

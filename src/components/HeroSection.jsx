@@ -11,7 +11,7 @@ export default function HeroSection() {
         <div className={`hero-section-text-content ${heroSectionOpen ? "open" : ""}`}>
           <h2>Welcome to My Portfolio</h2>
           <div className={`hero-section-text-content-arrows-right ${heroSectionOpen ? "open" : ""}`}>
-            <span>&gt;</span>
+            <span>▶</span>
           </div>
         </div>
       </div>
