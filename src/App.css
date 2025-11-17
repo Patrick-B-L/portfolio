@@ -19,13 +19,19 @@ body {
 .container {
   margin: auto;
   width: 90vw;
-  max-width: 1400px;
   min-width: 300px;
 }
 h1 {
   font-size: 2rem;
   font-family: 'Courier New', Courier, monospace;
   color: var(--black-color);
+  margin: 20px 0;
+}
+
+.separator-line {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 20px 0;
 }
 

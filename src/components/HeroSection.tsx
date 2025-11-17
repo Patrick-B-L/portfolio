@@ -1,0 +1,32 @@
+import React, { useState } from 'react';
+import '../styles/HeroSection.css';
+
+export default function HeroSection(): React.JSX.Element {
+  const [heroSectionOpen, setHeroSectionOpen] = useState<boolean>(false);
+  const toggleHeroSection = (): void => setHeroSectionOpen(!heroSectionOpen);
+
+  return (
+    <section 
+      className='hero-section' 
+      id='HeroSection' 
+      onClick={toggleHeroSection} 
+      title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"}
+    >
+      <div>
+        <div className={`hero-section-text-content ${heroSectionOpen ? "open" : ""}`}>
+          <h2>Welcome to My Portfolio</h2>
+          <div className={`hero-section-text-content-expand-collapse ${heroSectionOpen ? "open" : ""}`}>
+            <div className='hero-section-first-expand-collapse-line'></div>
+            <div className='hero-section-second-expand-collapse-line'></div>
+          </div>
+        </div>
+      </div>
+      <div className={`hero-section-text-description ${heroSectionOpen ? "open" : ""}`}>
+        <p>
+          Hello! My name is Patrick and I am a developer with a passion for creating dynamic applications. 
+          Feel free to explore my portfolio, created with React and TypeScript, to see some of the projects I've worked on.
+        </p>
+      </div>
+    </section>
+  );
+}
