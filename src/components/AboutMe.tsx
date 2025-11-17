@@ -16,8 +16,9 @@ export default function AboutMe(): React.JSX.Element {
         <div className={`about-me-title ${aboutMeOpen ? "open" : ""}`}>
           <h2>About Me</h2>
         </div>
-        <div className={`about-me-title-arrows-right ${aboutMeOpen ? "open" : ""}`}>
-          <span>▶</span>
+        <div className={`about-me-expand-collapse ${aboutMeOpen ? "open" : ""}`}>
+          <div className='about-me-first-expand-collapse-line'></div>
+          <div className='about-me-second-expand-collapse-line'></div>
         </div>
       </div>
       <div className={`about-me-text ${aboutMeOpen ? "open" : ""}`}>

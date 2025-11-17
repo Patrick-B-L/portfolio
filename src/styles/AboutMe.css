@@ -17,25 +17,43 @@
   padding: 0.5rem 2rem;
   margin: 1rem;
 }
-.about-me-title-arrows-left {
-  color: rgba(0, 0, 0, 0.5);
-  rotate: 90deg;
-  transition: rotate 0.3s ease-in-out;
-}
-.about-me-title-arrows-left.open {
-  rotate: 270deg;
-}
-.about-me-title-arrows-right {
-    color: rgba(0, 0, 0, 0.25);
-  rotate: 90deg;
-  transition: rotate 0.3s ease-in-out;
+
+  
+.about-me-expand-collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out;
   margin-bottom: 1rem;
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
-.about-me-title-arrows-right.open {
-  rotate: -90deg;
+.about-me-expand-collapse:hover {
+  transform: scale(1.50);
+}
+.about-me-expand-collapse.open {
+  transform: rotateX(180deg);
   margin-bottom: 0;
 }
+
+.about-me-first-expand-collapse-line {
+  display: flex;
+  width: 2rem;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 2px 0;
+  transition: rotate 0.3s ease-in-out;
+}
+
+.about-me-second-expand-collapse-line {
+  display: flex;
+  width: 1rem;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 2px 0;
+  transition: rotate 0.3s ease-in-out;
+}
+
 .about-me-text {
   max-height: 0;
   opacity: 0;

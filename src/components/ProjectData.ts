@@ -44,7 +44,7 @@ const projectData: Project[] = [
   {
     image: process.env.PUBLIC_URL + '/images/AI_Chat_GUI.jpg',
     title: 'AI Chat GUI',
-    description: 'A sleek, customizable desktop interface for managing AI chat sessions locally using Ollama. Built with Python and CustomTkinter, this GUI offers session management, autosave, model configuration, and privacy-first controls — all wrapped in a modern GUI. This project is an unofficial interface for interacting with locally hosted Ollama models and is not affiliated with or endorsed by Ollama.',
+    description: 'A sleek, customizable desktop interface for managing AI chat sessions locally using Ollama. Built with Python and CustomTkinter, this GUI offers session management, autosave, model configuration, and privacy-first controls — all wrapped in a modern GUI. *This project is an unofficial interface for interacting with locally hosted Ollama models and is not affiliated with or endorsed by Ollama.',
     ghLink: 'https://github.com/Patrick-B-L/ai_chat_gui'
   }
 ];
