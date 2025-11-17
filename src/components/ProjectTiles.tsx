@@ -1,15 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react'
-import projectData from './ProjectData.jsx'
+import React, { useState, useEffect, useRef } from 'react';
+import projectData from './ProjectData';
+import { Project } from '../types/project';
 
-export default function ProjectTiles() {
-  const [itemsPerRow, setItemsPerRow] = useState(3);
-  const containerRef = useRef(null);
+export default function ProjectTiles(): React.JSX.Element {
+  const [itemsPerRow, setItemsPerRow] = useState<number>(3);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const updateLayout = () => {
+    const updateLayout = (): void => {
       const width = window.innerWidth;
       
-      let newItemsPerRow;
+      let newItemsPerRow: number;
       // Based on actual observed wrapping behavior from console logs
       // 1685+ = 3 tiles, 1147-1684 = 2 tiles, <1147 = 1 tile
       if (width >= 1685) {
@@ -37,7 +38,7 @@ export default function ProjectTiles() {
   }, []);
 
   // Group projects into rows
-  const rows = [];
+  const rows: Project[][] = [];
   for (let i = 0; i < projectData.length; i += itemsPerRow) {
     rows.push(projectData.slice(i, i + itemsPerRow));
   }
@@ -67,10 +68,24 @@ export default function ProjectTiles() {
                 </div>
                 <div className='project-tile-links'>
                   {project.website && (
-                    <a href={project.website} target='_blank' rel='noopener noreferrer' title='View Website'><i className="fas fa-globe"></i></a>
+                    <a 
+                      href={project.website} 
+                      target='_blank' 
+                      rel='noopener noreferrer' 
+                      title='View Website'
+                    >
+                      <i className="fas fa-globe"></i>
+                    </a>
                   )}
                   {project.ghLink && (
-                    <a href={project.ghLink} target='_blank' rel='noopener noreferrer' title='View Project In Github'><i className="fab fa-github"></i></a>
+                    <a 
+                      href={project.ghLink} 
+                      target='_blank' 
+                      rel='noopener noreferrer' 
+                      title='View Project In Github'
+                    >
+                      <i className="fab fa-github"></i>
+                    </a>
                   )}
                 </div>
               </li>
@@ -79,5 +94,5 @@ export default function ProjectTiles() {
         ))}
       </div>
     </div>
-  )
+  );
 }

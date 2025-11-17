@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
-import '../styles/HeroSection.css'
+import React, { useState } from 'react';
+import '../styles/HeroSection.css';
 
-export default function HeroSection() {
-  const [heroSectionOpen, setHeroSectionOpen] = useState(false);
-  const toggleHeroSection = () => setHeroSectionOpen(!heroSectionOpen);
+export default function HeroSection(): React.JSX.Element {
+  const [heroSectionOpen, setHeroSectionOpen] = useState<boolean>(false);
+  const toggleHeroSection = (): void => setHeroSectionOpen(!heroSectionOpen);
 
   return (
-    <section className='hero-section' id='HeroSection' onClick={toggleHeroSection} title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"}>
+    <section 
+      className='hero-section' 
+      id='HeroSection' 
+      onClick={toggleHeroSection} 
+      title={heroSectionOpen ? "Click To Minimize the Section" : "Click To Expand the Section"}
+    >
       <div>
         <div className={`hero-section-text-content ${heroSectionOpen ? "open" : ""}`}>
           <h2>Welcome to My Portfolio</h2>
@@ -22,5 +27,5 @@ export default function HeroSection() {
         </p>
       </div>
     </section>
-  )
+  );
 }
